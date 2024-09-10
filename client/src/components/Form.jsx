@@ -5,7 +5,7 @@ export default function Form() {
             <div className="m-12">
                 <h1 className="text-3xl">Easily book an appointment in just 3 easy steps.</h1>
                 <form action="" className="flex justify-between font-semibold text-gray-600">
-                    <div className="flex flex-col justify-end m-8 text-xl">
+                    <div className="flex flex-col justify-end m-8 ml-0 text-xl">
                         <label htmlFor="email address">email address</label>
                         <input type="email" required placeholder="enter your email address" className="border-2 border-solid border-sky-400 focus:border-sky-600 focus:shadow-md focus:shadow-sky-200 outline-none w-72 rounded-xl h-12 px-2"/>
                     </div>
