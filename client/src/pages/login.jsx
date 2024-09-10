@@ -1,7 +1,7 @@
 import { useState } from "react"
 
 
-export default function login() {
+export default function Login() {
     // const [UserData, setUserData] = useState(
     //     [
     //         {
