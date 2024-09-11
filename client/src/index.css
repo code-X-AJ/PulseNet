@@ -79,7 +79,7 @@
     height: 100%;
 } */
 
-.container input{
+/* .container input{
     background-color: #eee;
     border: none;
     margin: 8px 0;
@@ -101,7 +101,7 @@
     left: 0;
     width: 50%;
     z-index: 2;
-}
+} */
 
 .container.active .sign-in{
     transform: translateX(100%);
