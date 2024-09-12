@@ -1,4 +1,4 @@
-import doctor from "./images/second-transformed.png";
+// import doctor from "./images/second-transformed.png";
 
 export default function AboutUs() {
     return (
@@ -6,7 +6,7 @@ export default function AboutUs() {
             <h1 className="text-3xl font-semibold text-center m-8">pulseNet's story: get to know us</h1>
             <div className="flex justify-between m-20">
                 <div className="rounded-3xl border-2 border-solid border-sky-500 w-[30rem]">
-                    <img src={doctor} alt="" width={"100%"}/>
+                    {/* <img src={doctor} alt="" width={"100%"}/> */}
                 </div>
                 <div className="w-[32rem]">
                     <p>

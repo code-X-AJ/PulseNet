@@ -1,4 +1,4 @@
-import image from './images/3rd.png'
+// import image from './images/3rd.png'
 
 export default function working() {
     return (
@@ -9,7 +9,7 @@ export default function working() {
                 below to proceed with your selected services. You can also see our FAQ section for more guidance:
             </p>
             <div className='flex justify-center'>
-            <img src={image} alt="" width={"80%"}/>
+            {/* <img src={image} alt="" width={"80%"}/> */}
             </div>
         </div>
     )

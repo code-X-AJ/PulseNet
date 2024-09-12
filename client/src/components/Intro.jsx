@@ -1,4 +1,4 @@
-import doctor from "./images/first.png";
+// import doctor from "./images/first.png";
 
 export default function Intro() {
     return (
@@ -23,7 +23,7 @@ export default function Intro() {
 
             </div>
             <div className="z-[-1] absolute right-0 mt-[-100px]">
-                <img src={doctor} alt="" width={"5000px"} />
+                {/* <img src={doctor} alt="" width={"5000px"} /> */}
             </div>
         </div>
     )

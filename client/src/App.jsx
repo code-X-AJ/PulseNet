@@ -1,12 +1,14 @@
-import Home from "./pages/home"
-// import Login from "./pages/login";
+import AllRoutes from "./routes/AllRoutes"
+import Home from "./pages/Home"
+import Login from "./pages/Login"
 
 function App() {
 
   return (
     <>  
-      {/* <Login/> */}
-      <Home/>
+
+      {/* <Login /> */}
+      <AllRoutes />
     </>
   )
 }

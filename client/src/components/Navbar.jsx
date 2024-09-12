@@ -1,6 +1,6 @@
 import { useState } from "react";
-import image from "./images/search-interface-symbol.png"; // Assuming the image is in the same directory
-import logo from './images/logo.png'
+// import image from "./images/search-interface-symbol.png"; // Assuming the image is in the same directory
+// import logo from './images/logo.png'
 
 export default function Navbar() {
     const [searchText, setSearchText] = useState('');
@@ -14,7 +14,7 @@ export default function Navbar() {
             <div className="flex">
 
                 <div className="absolute left-28">
-                    <img src={logo} alt="" width={"20%"} />
+                    {/* <img src={logo} alt="" width={"20%"} /> */}
                 </div>
                 <div className="flex gap-6 m-2">
                     <div className="relative w-80 h-9">
@@ -34,7 +34,7 @@ export default function Navbar() {
                             </button>
                         )}
                         <span className={`${searchText ? 'opacity-0 z-[-1]' : ''} absolute right-2 top-1/2 transform -translate-y-1/2 w-4 h-4`}>
-                            <img src={image} alt="search-icon" className="w-full h-full" />
+                            {/* <img src={image} alt="search-icon" className="w-full h-full" /> */}
                         </span>
                     </div>
 
