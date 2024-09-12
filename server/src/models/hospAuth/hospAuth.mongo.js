@@ -49,7 +49,12 @@ const hospSchema = new mongoose.Schema({
     docs: {
         type: String,
         default: "",
-        required: true
+        // required: true
+    },    
+    hospImage: {
+        type: String,
+        default: "",
+        // required: true
     },    
     
     links:{

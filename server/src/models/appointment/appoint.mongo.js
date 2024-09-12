@@ -6,7 +6,7 @@ const appointSchema = new mongoose.Schema({
     },    
     
     age :{
-        type:number,
+        type:Number,
     },    
     
     email:{

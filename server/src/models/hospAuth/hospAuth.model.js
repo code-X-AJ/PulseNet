@@ -4,17 +4,17 @@ const hospSchema = require('./hospAuth.mongo')
 
 async function createNewHospital(info) {
     try {
-        var { hospitalName, hospitalType, registrationNumber, username, password, address, pincode, facilities, operatingHours, docs, links } = info;
+        var { hname, htype, rnum, address, username, password, pincode, ohours, slinks, facilities} = info;
 
         var existingProfile = await hospSchema.findOne({ username })
         if(existingProfile) return { msg: "Username already used.", status: false }
         
-        existingProfile = await hospSchema.findOne({ registrationNumber })
+        existingProfile = await hospSchema.findOne({ rnum })
         if(existingProfile) return { msg: "Registration Number already used.", status: false }
 
         else{
             let hashedPassword = await bcrypt.hash(password, 10);
-            let hospProfile = await hospSchema.create({ hospitalName, hospitalType, registrationNumber, username, password:hashedPassword, address, pincode, facilities, operatingHours, docs, links,
+            let hospProfile = await hospSchema.create({ hospitalName:hname, hospitalType:htype, registrationNumber:rnum, username, password:hashedPassword, address, pincode, facilities:facilities, operatingHours:ohours, links:slinks
             })
             delete hospProfile.password;
             return { msg: " submited successfully", status: true, hospProfile }
@@ -42,7 +42,20 @@ async function loginHospital(info) {
     }
 }
 
-module.exports = { createNewHospital, loginHospital }
+async function fetchAllHospital() {
+    try {
+        const hospProfiles = await hospSchema.find().sort({createdAt:-1});
+        if (hospProfiles.length==0) {
+            return { msg: "No hospital registered", status: false }
+        }
+        else return ({ status: true, hospProfiles})
+        
+    } catch (error) {
+        console.error(error);
+    }
+}
+
+module.exports = { createNewHospital, loginHospital, fetchAllHospital }
 // sample profile
 // {
 //     "hospitalName": "Max hospital",

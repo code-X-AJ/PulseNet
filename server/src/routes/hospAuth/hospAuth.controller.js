@@ -1,4 +1,4 @@
-const { createNewHospital, loginHospital } = require('../../models/hospAuth/hospAuth.model')
+const { createNewHospital, loginHospital, fetchAllHospital } = require('../../models/hospAuth/hospAuth.model')
 
 async function httpPostHospSignup(req, res) {
     console.log("at httpPostHospSignup");
@@ -15,9 +15,25 @@ async function httpPostHospSignup(req, res) {
 }
 
 async function httpPostHospLogin(req, res) {
+    console.log("at httpPostHospLogin");
+
     try {
         const info = req.body
         const result = await loginHospital(info);
+        console.log(result);
+        return res.json(result)
+
+    } catch (err) {
+        console.log(err.message)
+        return res.status(400).json({ "err": err.message })
+    }
+}
+
+async function httpGetAllHospitals(req, res) {
+    console.log("at httpGetAllHospitals");
+    
+    try {
+        const result = await fetchAllHospital();
         console.log(result);
         return res.json(result)
 
@@ -31,4 +47,5 @@ async function httpPostHospLogin(req, res) {
 module.exports = {
     httpPostHospSignup,
     httpPostHospLogin,
+    httpGetAllHospitals
 }
