@@ -13,8 +13,8 @@ export default function Navbar() {
         <div className="flex items-center flex-col tracking-[0.5]">
             <div className="flex">
 
-                <div className="absolute left-28">
-                    <img src={logo} alt="" width={"20%"} />
+                <div className="absolute left-28 w-1/4">
+                    <img src={logo} alt="" width={"40%"} />
                 </div>
                 <div className="flex gap-6 m-2">
                     <div className="relative w-80 h-9">
@@ -23,7 +23,7 @@ export default function Navbar() {
                             value={searchText}
                             onChange={(e) => setSearchText(e.target.value)}
                             placeholder="Search..."
-                            className="w-full py-1 pl-3 pr-8 border-2 border-gray-400 rounded-full focus:outline-none focus:border-black transition duration-300 ease-in-out"
+                            className="w-full py-1 pl-3 pr-8 border-2 border-gray-400 rounded-full focus:outline-none focus:border-blue-600 focus:shadow-lg shadow-blue-300 transition duration-300 ease-in-out"
                         />
                         {searchText && (
                             <button
@@ -39,8 +39,8 @@ export default function Navbar() {
                     </div>
 
                     <div className="flex gap-4 h-10">
-                        <button className="bg-blue-800 hover:bg-white hover:text-blue-800 hover:border-2 border-blue-800  text-white text-xs rounded-lg font-semibold uppercase cursor-pointer px-[15px] py-[10px] border-2 border-solid border-transparent tracking-[0.5px]">sign in</button>
-                        <button className="bg-blue-800 hover:bg-white hover:text-blue-800 hover:border-2 border-blue-800 text-white text-xs rounded-lg font-semibold uppercase cursor-pointer px-[15px] py-[10px] border-2 border-solid border-transparent tracking-[0.5px]">Appointments</button>
+                        <button className="bg-blue-800 hover:bg-blue-900 hover:text-blue-800 hover:border-2 border-blue-800  text-white text-xs rounded-lg font-semibold uppercase cursor-pointer px-[15px] py-[10px] border-2 border-solid border-transparent tracking-[0.5px]">sign in</button>
+                        <button className="bg-blue-800 hover:bg-blue-900 hover:text-blue-800 hover:border-2 border-blue-800 text-white text-xs rounded-lg font-semibold uppercase cursor-pointer px-[15px] py-[10px] border-2 border-solid border-transparent tracking-[0.5px]">Appointments</button>
                     </div>
 
                 </div>
